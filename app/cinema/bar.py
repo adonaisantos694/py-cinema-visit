@@ -2,6 +2,5 @@ from app.people.customer import Customer
 
 
 class CinemaBar:
-    @staticmethod
-    def sell_product(food: str, customer: Customer) -> None:
-        print(f"Cinema bar sold {food} to {customer.name}.")
+    def sell_product(self, customer: Customer, product: str) -> None:
+        print(f"Cinema bar sold {product} to {customer.name}.")
