@@ -12,9 +12,9 @@ def cinema_visit(
     cleaner: str,
     movie: str,
 ) -> None:
+
     cinema_hall = CinemaHall(number=hall_number)
     cleaner_staff = Cleaner(name=cleaner)
-    cinema_bar = CinemaBar()
 
     customer_objects = [
         Customer(name=customer["name"], food=customer["food"])
@@ -22,7 +22,7 @@ def cinema_visit(
     ]
 
     for customer in customer_objects:
-        cinema_bar.sell_product(
+        CinemaBar.sell_product(   # 👈 chamada estática correta
             customer=customer,
             product=customer.food,
         )
